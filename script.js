@@ -115,6 +115,7 @@ closeBtnForLearnMoreAbout.addEventListener("click", function () {
   learnMore.style.display = "none";
   about.style.display = "flex";
   headerMain.style.display = "flex";
+  closeBtnForLearnMoreAbout.style.display = "none";
 });
 
 let firstProgressBar = document.querySelector(".first-language-percentage");
