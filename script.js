@@ -291,7 +291,7 @@ const carousel = document.querySelector(".carousel"),
   picturePercentge = document.querySelector("#portfolio-footer-percentge");
 arrowIcons.forEach((icon) => {
   icon.addEventListener("click", () => {
-    let firstImgWidth = firstImg.clientWidth + 14;
+    let firstImgWidth = firstImg.clientWidth + 20;
     carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
   });
 });

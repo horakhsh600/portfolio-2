@@ -143,6 +143,10 @@
     transition: all 0.5s;
     margin-top: 25px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto auto auto;
   }
 
   #Home-button:hover {
@@ -403,13 +407,7 @@
     font-family: "Mulish";
     margin-left: 15px;
   }
-  .carousel img {
-    height: 246.67px;
-    object-fit: cover;
-    user-select: none;
-    margin-left: 14px;
-    width: calc(100% / 3);
-  }
+
   #profile-part-3 p a,
   #profile-part-4 p a,
   #profile-part-5 p a {
@@ -432,6 +430,32 @@
   #portfolio-title {
     font-style: normal;
     color: #fe0000;
+  }
+  .wrapper {
+    max-width: 1200px;
+    padding: 0 10px;
+    transition: all 0.3s;
+    padding-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+  .wrapper .carousel {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    display: flex;
+  }
+  .carousel img:first-child {
+    margin-left: 0px;
+  }
+  .carousel img {
+    height: 246.67px;
+    object-fit: cover;
+    user-select: none;
+    margin-left: 0px;
+    width: calc(100% / 3);
   }
   .about-learn-more-aside-bottom ul {
     padding-inline-start: 0;
@@ -629,16 +653,6 @@
     justify-content: space-around;
     margin-top: 40px;
   }
-  .portfolio-main-content {
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    object-fit: cover;
-    margin-top: 50px;
-    overflow: hidden;
-  }
-  .images {
-  }
   .part-7-main-learn-more-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -710,6 +724,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 25px;
   }
   .portflio-footer-font {
     display: flex;
@@ -1079,7 +1094,7 @@
     font-family: "Poppins", sans-serif;
   }
 }
-
+/* 
 @media screen and (min-width: 800px) and (max-width: 1110px) {
   * {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2172,7 +2187,7 @@
     color: #777;
     font-size: 14px;
   }
-*/
+
   #portfolio-title {
     font-style: normal;
     color: #fe0000;
@@ -2194,6 +2209,11 @@
     margin-left: 15px;
     cursor: pointer;
   }
+  .carousel img {
+    width: 100%;
+    object-fit: cover;
+    margin-left: 14px;
+  }
   .portfolio-footer-progress-bar {
     background-color: rgba(255, 255, 255, 0.2);
     width: 100px;
@@ -2211,27 +2231,7 @@
   #portfolio-footer-second-font {
     margin-left: 15px;
   }
-  .wrapper {
-    max-width: 1200px;
-    padding: 0 10px;
-    transition: all 0.3s;
-    padding-left: 10px;
-  }
-  .wrapper .carousel {
-    font-size: 0px;
-    cursor: pointer;
-    overflow: hidden;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-  }
-  .carousel img:first-child {
-    margin-left: 0px;
-  }
-  .carousel img {
-    width: 100%;
-    object-fit: cover;
-    margin-left: 14px;
-  }
+  
   .about-learn-more-aside-bottom ul {
     padding-inline-start: 0;
   }
@@ -2856,4 +2856,4 @@
     transition: all 0.5s;
     font-family: "Poppins", sans-serif;
   }
-}
+} */
