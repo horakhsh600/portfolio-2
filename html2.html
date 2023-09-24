@@ -1,40 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <style>
-      .container {
-        width: 300px; /* Adjust the width as needed */
-        height: 400px; /* Adjust the height as needed */
-        background-color: black;
-        overflow: hidden;
+      .modal {
+        box-shadow: var(--shadow-2), 0 0 0 100vw rgb(0 0 0 / 0.5);
+
+        background: #fff;
+        color: #222;
+        border: 0;
+        border-radius: 0.25rem;
       }
 
-      .content {
-        background-color: gray;
-        padding: 10px;
-        overflow-y: scroll;
-        height: 100%;
+      .modal::backdrop {
+        background: rgb(0 0 0 / 0.5);
+        opacity: 0;
       }
 
-      img {
-        max-width: 100%;
-        height: auto;
+      .modal[open] {
+        animation: slide-up 1000ms forwards, fade-in 500ms forwards;
+      }
+      /* // .modal[open]::backdrop {
+      //   animation: fade-in 500ms forwards;
+      // } */
+
+      .modal[closing] {
         display: block;
-        margin: 0 auto;
+        pointer-events: none;
+        inset: 0;
+        animation: fade-out 500ms forwards;
+      }
+
+      /* .modal[closing]::backdrop {
+      //   animation: fade-out 500ms forwards;
+      // }
+      */
+
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade-out {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes slide-up {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+
+      /* extra styling */
+
+      .modal {
+        max-width: 50ch;
+
+        & > * {
+          margin: 0 0 0.5rem 0;
+        }
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 2rem;
+        font-family: system-ui;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        color: var(--gray-8);
+        /*
+        // background-image: url('https://images.unsplash.com/photo-1644242629712-943ae5c8c4f3?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0Njc1MjQxNA&ixlib=rb-1.2.1&q=85');
+        // background-size: cover;
+        */
+      }
+
+      h1 em {
+        color: var(--cyan-9);
+        text-decoration: underline;
+        text-underline-offset: 0.25em;
+      }
+
+      h2 {
+        color: var(--cyan-9);
+      }
+
+      .button {
+        border: 0;
+        cursor: pointer;
+        background: var(--gray-8);
+        color: var(--gray-2);
+        font-weight: 700;
+        padding: var(--size-2) var(--size-4);
+      }
+
+      .button:hover,
+      .button:focus {
+        background: var(--cyan-9);
+      }
+
+      form {
+        display: grid;
+        gap: 1em;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="content">
-        <img src="your-image.jpg" alt="Your Image" />
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
-          ullam officia iusto adipisci, maiores molestiae praesentium corrupti
-          perspiciatis in, dignissimos aliquam, quis beatae aliquid quia!
-          Sapiente hic eos exercitationem ducimus?
-        </p>
-      </div>
-    </div>
+    <h1>Animating a &ltdialog&gt element</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit alias
+      dicta quibusdam cumque ipsa ipsum reiciendis animi, officia provident
+      veniam quis delectus minima earum suscipit ea, beatae vitae ipsam nemo.
+    </p>
+    <p>
+      Alias, architecto sapiente nostrum id, sed explicabo numquam aspernatur
+      ratione qui excepturi repellat porro culpa molestiae? Culpa dolorem
+      commodi cupiditate, eos deleniti similique repellendus nam velit natus a
+      soluta et.
+    </p>
+    <p>
+      Fugiat ratione impedit officiis? Eligendi sapiente culpa tenetur esse quo
+      reiciendis illum vero nisi ullam consequatur illo molestiae, nihil eaque.
+      Esse asperiores tenetur natus! Quo asperiores molestias sed assumenda
+      alias.
+    </p>
+    <p>
+      Sequi quo animi, nostrum laboriosam veritatis consequatur. Eos cumque unde
+      porro explicabo provident, possimus alias magni pariatur quis consequuntur
+      voluptatum? Debitis necessitatibus facilis fugiat repudiandae nobis neque
+      nam, vel odio?
+    </p>
+    <button class="button open-button">open modal</button>
+
+    <dialog class="modal" id="modal">
+      <h2>An interesting title</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse
+        nisi, laboriosam illum temporibus ipsam?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo.
+      </p>
+      <button class="button close-button">close modal</button>
+    </dialog>
+
+    <!--   
+  <form class="form" method="dialog">
+    <label>Your name <input type="text"></label>
+    <label>Your email <input type="email"></label>
+    <button class="button" type="submit">submit form</button>
+  </form>-->
+    <script>
+      const modal = document.querySelector("#modal");
+      const openModal = document.querySelector(".open-button");
+      const closeModal = document.querySelector(".close-button");
+
+      openModal.addEventListener("click", () => {
+        modal.showModal();
+      });
+
+      closeModal.addEventListener("click", () => {
+        modal.setAttribute("closing", "");
+
+        modal.addEventListener(
+          "animationend",
+          () => {
+            modal.removeAttribute("closing");
+            modal.close();
+          },
+          { once: true }
+        );
+      });
+    </script>
   </body>
 </html>

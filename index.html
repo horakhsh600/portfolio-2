@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Mulish&family=Poppins&display=swap"
       rel="stylesheet"
     />
+
     <title>Portfolio</title>
   </head>
   <body>
@@ -22,7 +23,7 @@
         <img src="images/logo.png" alt="" />
       </div>
       <nav class="header-right-side">
-        <ul>
+        <ul id="header-right-side-list">
           <li><a href="#" id="home-option">Home</a></li>
           <li><a href="#" id="about-option">About</a></li>
           <li><a href="#" id="portfolio-option">Portfolio</a></li>
@@ -30,27 +31,23 @@
           <li><a href="#" id="contact-option">Contact</a></li>
         </ul>
       </nav>
-      <div class="menu-icon">
-        <input type="checkbox" name="" id="check" />
-        <label for="check" class="checkbtn">
-          <img src="images/menu-icon.png" alt="" />
-        </label>
+      <div class="menu-icon" id="menu-icon" true>
+        <img src="images/menu-icon.png" alt="" />
       </div>
     </header>
+    <nav class="header-right-side-phone" id="header-right-side-phone">
+      <ul class="header-1-ul" id="header-right-side-list">
+        <li><a href="#" id="home-option-phone">Home</a></li>
+        <li><a href="#" id="about-option-phone">About</a></li>
+        <li>
+          <a href="#" id="portfolio-option-phone">Portfolio</a>
+        </li>
+        <li><a href="#" id="news-option-phone">News</a></li>
+        <li><a href="#" id="contact-option-phone">Contact</a></li>
+      </ul>
+    </nav>
     <div class="container">
-      <nav class="header-right-side-phone">
-        <ul class="header-1-ul">
-          <li><a href="#" id="home-option">Home</a></li>
-          <li><a href="#" id="about-option">About</a></li>
-          <li><a href="#" id="portfolio-option">Portfolio</a></li>
-          <li><a href="#" id="news-option">News</a></li>
-          <li><a href="#" id="contact-option">Contact</a></li>
-        </ul>
-      </nav>
       <main class="home" id="home">
-        <div>
-          <img src="" alt="" />
-        </div>
         <h1>HORAKHSH <i id="main-font-title">SHARIFI</i></h1>
         <p>
           <i id="home-main-font-second-first">Creative </i
@@ -60,7 +57,10 @@
       </main>
 
       <div class="about-container--">
-        <div class="about-learn-more-container--">
+        <div
+          class="about-learn-more-container--"
+          id="about-learn-more-container--"
+        >
           <div class="about-learn-more" id="about-learn-more">
             <aside class="about-learn-more-aside">
               <div class="about-learn-more-profile">
@@ -90,7 +90,7 @@
                     <img src="images/location-icon.png" alt="" />
                     <p>
                       <a href="https://goo.gl/maps/pTNRE1o1gWvJZ65x9"
-                        >Faisal-town str.45, Islamabad, PAK</a
+                        >F-18 str.45, Islamabad, PAK</a
                       >
                     </p>
                   </li>
@@ -389,61 +389,63 @@
         <div class="portfolio-header">
           <h1>Creative <i id="portfolio-title">Portfolio</i></h1>
         </div>
-
-        <div class="portfolio-main-content">
+        <div class="wrapper">
           <div class="carousel">
-            <div class="image-first">
-              <img
-                src="images/avocado-minimalism-pink-wallpaper-preview.jpg"
-                alt=""
-                class="first-img"
-              />
-              <div class="avocado-title">
-                <h3 id="avocado-title-first-p">Sweet Fruit</h3>
-                <span id="avocado-title-second-p">Vimeo</span>
+            <img
+              src="images/avocado.jpg"
+              alt=""
+              class="first-img"
+              draggable="false"
+            />
+            <img
+              src="images/trash.jpg"
+              alt=""
+              class="second-img"
+              draggable="false"
+            />
+            <img
+              src="images/icecream.jpg"
+              alt=""
+              class="third-img"
+              draggable="false"
+            />
+            <img
+              src="images/apple.jpg"
+              alt=""
+              class="fourth-img"
+              draggable="false"
+            />
+            <img
+              src="images/orange.jpg"
+              alt=""
+              class="fifth-img"
+              draggable="false"
+            />
+            <img
+              src="images/cheery.jpg"
+              alt=""
+              class="sixth-img"
+              draggable="false"
+            />
+          </div>
+          <div class="portfolio-footer">
+            <div class="portflio-footer-font">
+              <p id="portfolio-footer-first-font">01</p>
+              <div class="portfolio-footer-progress-bar">
+                <div id="portfolio-footer-percentge"></div>
               </div>
+              <p id="portfolio-footer-second-font">06</p>
             </div>
-            <div class="image-second">
-              <img src="images/trash.jpg" alt="" class="second-img" />
-              <div class="avocado-title">
-                <h3 id="avocado-title-first-p">Sweet Fruit</h3>
-                <span id="avocado-title-second-p">Vimeo</span>
-              </div>
-            </div>
-            <div class="image-third">
-              <img src="images/icecream.jpg" alt="" class="third-img" />
-              <div class="avocado-title">
-                <h3 id="avocado-title-first-p">Sweet Fruit</h3>
-                <span id="avocado-title-second-p">Vimeo</span>
-              </div>
-            </div>
-            <div class="image-fourth">
-              <img src="images/apple.jpg" alt="" class="fourth-img" />
-              <div class="avocado-title">
-                <h3 id="avocado-title-first-p">Sweet Fruit</h3>
-                <span id="avocado-title-second-p">Vimeo</span>
-              </div>
-            </div>
-            <div class="image-fifth">
-              <img src="images/orange.jpg" alt="" class="fifth-img" />
-              <div class="avocado-title">
-                <h3 id="avocado-title-first-p">Sweet Fruit</h3>
-                <span id="avocado-title-second-p">Vimeo</span>
-              </div>
-            </div>
-            <div class="image-sixth">
-              <img src="images/cheery.jpg" alt="" class="sixth-img" />
-              <div class="avocado-title">
-                <h3 id="avocado-title-first-p">Sweet Fruit</h3>
-                <span id="avocado-title-second-p">Vimeo</span>
-              </div>
+            <div class="arrows">
+              <img id="left" src="images/back-arrow.png" alt="" />
+              <img id="right" src="images/farward-arrow.png" alt="" />
             </div>
           </div>
         </div>
       </main>
       <div class="slide-1-container" id="slide-1-container">
         <div class="slide-1-contaner----">
-          <div class="close-container" id="close-container">
+          <div class="close-container" id="close-container-1">
             <div>
               <img src="images/close.png" alt="" />
             </div>
@@ -485,83 +487,172 @@
           </div>
         </div>
       </div>
+      <div class="slide-2-container" id="slide-2-container">
+        <div class="slide-2-contaner----">
+          <div class="close-container" id="close-container-2">
+            <div>
+              <img src="images/close.png" alt="" />
+            </div>
+          </div>
+          <div class="news-slide-main-content-2">
+            <div class="img-container-news" id="img-container-news">
+              <img src="images/notebook-image.jpg" alt="" />
+            </div>
+            <div>
+              <h1 id="slide-2-content-text">
+                Building brands through customer service
+              </h1>
+              <p id="slide-2-content--text">Branding</p>
+              <div class="news-slide-main-content-2-text">
+                <p>
+                  Oki is a leading web design agency with an award-winning
+                  design team that creates innovative, effective websites that
+                  capture your brand, improve your conversion rates, and
+                  maximize your revenue to help grow your business and achieve
+                  your goals.
+                  <br />
+                  <br />
+                  In today’s digital world, your website is the first
+                  interaction consumers have with your business. That's why
+                  almost 95 percent of a user’s first impression relates to web
+                  design. It’s also why web design services can have an immense
+                  impact on your company’s bottom line.
+                  <br />
+                  <br />
+                  That’s why more companies are not only reevaluating their
+                  website’s design but also partnering with Kura, the web design
+                  agency that’s driven more than $2.4 billion in revenue for its
+                  clients. With over 50 web design awards under our belt, we're
+                  confident we can design a custom website that drives sales for
+                  your unique business.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-3-container" id="slide-3-container">
+        <div class="slide-3-contaner----">
+          <div class="close-container" id="close-container-3">
+            <div>
+              <img src="images/close.png" alt="" />
+            </div>
+          </div>
+          <div class="news-slide-main-content-3">
+            <div class="img-container-news" id="img-container-news">
+              <img src="images/cake-image.jpg" alt="" />
+            </div>
+            <div>
+              <h1 id="slide-3-content-text">
+                Building brands through customer service
+              </h1>
+              <p id="slide-3-content--text">Branding</p>
+              <div class="news-slide-main-content-3-text">
+                <p>
+                  Oki is a leading web design agency with an award-winning
+                  design team that creates innovative, effective websites that
+                  capture your brand, improve your conversion rates, and
+                  maximize your revenue to help grow your business and achieve
+                  your goals.
+                  <br />
+                  <br />
+                  In today’s digital world, your website is the first
+                  interaction consumers have with your business. That's why
+                  almost 95 percent of a user’s first impression relates to web
+                  design. It’s also why web design services can have an immense
+                  impact on your company’s bottom line.
+                  <br />
+                  <br />
+                  That’s why more companies are not only reevaluating their
+                  website’s design but also partnering with Kura, the web design
+                  agency that’s driven more than $2.4 billion in revenue for its
+                  clients. With over 50 web design awards under our belt, we're
+                  confident we can design a custom website that drives sales for
+                  your unique business.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <main class="News" id="news">
         <h1 id="news-title-text">Latest <i id="news-title--text">News</i></h1>
         <hr />
 
         <div class="news-main-content" id="news-main-content">
-          <div class="news-first-img">
-            <img src="images/Shake-bottle.jpg" alt="" draggable="false" />
-            <div class="news-fisrt-card-font">
-              <p id="news-slides-font">
-                Building brands through customer service
-              </p>
-              <p id="news-slides--font">Branding</p>
+          <div class="carousel">
+            <div class="news-first-img">
+              <img src="images/Shake-bottle.jpg" alt="" draggable="false" />
+              <div class="news-fisrt-card-font">
+                <p id="news-slides-font-1">
+                  Building brands through customer service
+                </p>
+                <p id="news-slides--font">Branding</p>
+              </div>
             </div>
-          </div>
 
-          <div class="news-second-img">
-            <img src="images/notebook-image.jpg" alt="" draggable="false" />
-            <div class="news-second-card-font">
-              <p id="news-slides-font">
-                Unstoppable Jamstack and Gatsby opportunity
-              </p>
-              <p id="news-slides--font">Design</p>
+            <div class="news-second-img">
+              <img src="images/notebook-image.jpg" alt="" draggable="false" />
+              <div class="news-second-card-font">
+                <p id="news-slides-font-2">
+                  Unstoppable Jamstack and Gatsby opportunity
+                </p>
+                <p id="news-slides--font">Design</p>
+              </div>
             </div>
-          </div>
 
-          <div class="news-third-img">
-            <img src="images/cake-image.jpg" alt="" draggable="false" />
-            <div class="news-third-card-font">
-              <p id="news-slides-font">
-                Electron framework adds encryption API
-              </p>
-              <p id="news-slides--font">Media</p>
+            <div class="news-third-img">
+              <img src="images/cake-image.jpg" alt="" draggable="false" />
+              <div class="news-third-card-font">
+                <p id="news-slides-font-3">
+                  Electron framework adds encryption API
+                </p>
+                <p id="news-slides--font">Media</p>
+              </div>
             </div>
-          </div>
 
-          <div class="news-fourth-img">
-            <img src="images/notebook-image-2.jpg" alt="" draggable="false" />
-            <div class="news-fourth-card-font">
-              <p id="news-slides-font">
-                Sentry for JavaScript monitors release health
-              </p>
-              <p id="news-slides--font">Technology</p>
+            <div class="news-fourth-img">
+              <img src="images/notebook-image-2.jpg" alt="" draggable="false" />
+              <div class="news-fourth-card-font">
+                <p id="news-slides-font-4">
+                  Sentry for JavaScript monitors release health
+                </p>
+                <p id="news-slides--font">Technology</p>
+              </div>
             </div>
-          </div>
 
-          <div class="news-fifth-img">
-            <img src="images/cofee-image.jpg" alt="" draggable="false" />
-            <div class="news-fifth-card-font">
-              <p id="news-slides-font">
-                Five reasons to begin a Packt subscription
-              </p>
-              <p id="news-slides--font">Lifestyle</p>
+            <div class="news-fifth-img">
+              <img src="images/cofee-image.jpg" alt="" draggable="false" />
+              <div class="news-fifth-card-font">
+                <p id="news-slides-font-5">
+                  Five reasons to begin a Packt subscription
+                </p>
+                <p id="news-slides--font">Lifestyle</p>
+              </div>
             </div>
-          </div>
 
-          <div class="news-sixth-img">
-            <img src="images/spaner-image.jpg" alt="" draggable="false" />
-            <div class="news-sixth-card-font">
-              <p id="news-slides-font">
-                Why developers are so divided over WordPress
-              </p>
-              <p id="news-slides--font">Modern</p>
+            <div class="news-sixth-img">
+              <img src="images/spaner-image.jpg" alt="" draggable="false" />
+              <div class="news-sixth-card-font">
+                <p id="news-slides-font-6">
+                  Why developers are so divided over WordPress
+                </p>
+                <p id="news-slides--font">Modern</p>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="portfolio-footer">
-          <div class="portflio-footer-font">
-            <p id="portfolio-footer-first-font">01</p>
-            <div class="portfolio-footer-progress-bar">
-              <div class="portfolio-footer-percentge"></div>
+          <div class="news-footer">
+            <div class="news-footer-font">
+              <p id="news-footer-first-font">01</p>
+              <div class="news-footer-progress-bar">
+                <div class="news-footer-percentge"></div>
+              </div>
+              <p id="news-footer-second-font">04</p>
             </div>
-            <p id="portfolio-footer-second-font">04</p>
-          </div>
-          <div class="arrows">
-            <img src="images/back-arrow.png" alt="" />
-            <img src="images/farward-arrow.png" alt="" />
+            <div class="arrows-2">
+              <img id="right-2" src="images/back-arrow.png" alt="" />
+              <img id="left-2" src="images/farward-arrow.png" alt="" />
+            </div>
           </div>
         </div>
       </main>
