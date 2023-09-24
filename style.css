@@ -83,7 +83,7 @@
     color: #fe0000;
   }
   .header-left-side > img {
-    max-width: 100px;
+    max-width: 130px;
     width: 100%;
   }
   .home {
@@ -1094,7 +1094,7 @@
     font-family: "Poppins", sans-serif;
   }
 }
-/* 
+
 @media screen and (min-width: 800px) and (max-width: 1110px) {
   * {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2199,7 +2199,7 @@
   }
   .portflio-footer-font {
     display: flex;
-  }
+  }*/
   .arrows {
     margin-left: 140px;
   }
@@ -2231,7 +2231,7 @@
   #portfolio-footer-second-font {
     margin-left: 15px;
   }
-  
+
   .about-learn-more-aside-bottom ul {
     padding-inline-start: 0;
   }
@@ -2856,4 +2856,4 @@
     transition: all 0.5s;
     font-family: "Poppins", sans-serif;
   }
-} */
+}
