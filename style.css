@@ -1654,7 +1654,6 @@
     font-family: "Poppins", sans-serif;
   }
 }
-
 @media screen and (max-width: 799px) {
   * {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1697,10 +1696,10 @@
   }
   .header-main {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    margin: auto;
-    width: 99%;
+    justify-content: space-around;
+    max-width: 799px;
+    width: 100%;
     padding: 3px 0;
   }
   .header-right-side {
@@ -1735,9 +1734,6 @@
     animation: fadeInRight 0.5s;
     z-index: 1;
     overflow-y: hidden;
-  }
-  .header-right-side-phone[closing] {
-    animation: ease-in 500ms forwards;
   }
   @keyframes fadeInRight {
     0% {
@@ -1791,8 +1787,8 @@
     color: #fe0000;
   }
   .header-left-side > img {
-    width: 100px;
-    height: 32px;
+    width: 110px;
+    height: 60px;
   }
   .home {
     text-align: center;
@@ -1897,6 +1893,7 @@
   #about-main-p i {
     font-style: normal;
   }
+
   #about-button {
     background-color: #fe0000;
     border: none;
@@ -2051,21 +2048,6 @@
     word-wrap: break-word;
     margin-bottom: -10px;
   }
-  #about-learn-more-font-second-first {
-    font-weight: 500;
-    color: #a2a2a2;
-    font-size: 15px;
-    line-height: 1.3;
-    font-family: "Poppins";
-    font-style: normal;
-  }
-  #abour-learn-more-font-content {
-    font-weight: 500;
-    color: #fff;
-    font-size: 15px;
-    line-height: 1.3;
-    font-family: "Poppins";
-  }
   .about-learn-more-main-container-part-1 {
     margin-bottom: 55px;
     margin-top: -20px;
@@ -2187,7 +2169,7 @@
     color: #777;
     font-size: 14px;
   }
-
+*/
   #portfolio-title {
     font-style: normal;
     color: #fe0000;
@@ -2196,10 +2178,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
   .portflio-footer-font {
     display: flex;
-  }*/
+  }
   .arrows {
     margin-left: 140px;
   }
@@ -2209,10 +2192,24 @@
     margin-left: 15px;
     cursor: pointer;
   }
+  .wrapper {
+    padding: 0 12px;
+    margin-top: 20px;
+  }
+  .wrapper .carousel {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+  }
+  .carousel img:first-child {
+    margin-left: 0px;
+  }
   .carousel img {
     width: 100%;
     object-fit: cover;
-    margin-left: 14px;
+    margin-left: 20px;
   }
   .portfolio-footer-progress-bar {
     background-color: rgba(255, 255, 255, 0.2);
@@ -2480,7 +2477,7 @@
     color: #fe0000;
     font-style: normal;
   }
-
+  /* 
   .news-main-content {
     max-width: 1200px;
     padding: 0 10px;
@@ -2505,7 +2502,7 @@
     object-fit: cover;
     margin-left: 14px;
   }
-  .news-main-content img {
+  .wrapper-2 img {
     width: 390px;
     height: 300px;
     border-radius: 10px 10px 0 0;
@@ -2538,6 +2535,49 @@
   .news-fifth-card-font,
   .news-sixth-card-font {
     padding: 7.5px 20px 7.5px 20px;
+  }
+     */
+  .wrapper-2 {
+    padding: 0 12px;
+    margin-top: 20px;
+  }
+  .wrapper-2 .carousel-2 {
+    font-size: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    display: flex;
+  }
+  .carousel-2 div:first-child {
+    margin-left: 0px;
+  }
+  .carousel-2 div {
+    width: 100%;
+    object-fit: cover;
+    margin-left: 30px;
+    color: white;
+  }
+  #first-card {
+    border-radius: 10px;
+  }
+  #first-card img,
+  #second-card img,
+  #third-card img,
+  #fourth-card img,
+  #fifth-card img,
+  #sixth-card img {
+    width: 460px;
+    height: 410px;
+    object-fit: cover;
+  }
+  #first-card span,
+  #second-card span,
+  #third-card span,
+  #fourth-card span,
+  #fifth-card span,
+  #sixth-card span {
+    background-color: #222222;
   }
   #news-slides-font-1,
   #news-slides-font-2,
@@ -2686,6 +2726,7 @@
   #news-footer-second-font {
     margin-left: 15px;
   }
+
   .Contact {
     display: none;
     padding: 20px;
