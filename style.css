@@ -3,6 +3,7 @@
   * {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
+    transition: all;
   }
   body {
     background-color: black;
@@ -38,7 +39,7 @@
     align-items: center;
     margin: auto;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 10px;
   }
   .header-main {
     display: flex;
@@ -2212,7 +2213,7 @@
     color: #777;
     font-size: 14px;
   }
-
+*/
   #portfolio-title {
     font-style: normal;
     color: #fe0000;
@@ -2225,7 +2226,7 @@
   }
   .portflio-footer-font {
     display: flex;
-  }*/
+  }
   .arrows {
     margin-left: 140px;
   }
@@ -2238,6 +2239,16 @@
   .wrapper {
     padding: 0 12px;
     margin-top: 20px;
+    animation: popup1 1s;
+  }
+
+  @keyframes popup1 {
+    0% {
+      transform: translateX(-300px);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
   .wrapper .carousel {
     font-size: 0px;
@@ -2252,7 +2263,7 @@
   .carousel img {
     width: 100%;
     object-fit: cover;
-    margin-left: 20px;
+    margin-left: 27px;
   }
   .portfolio-footer-progress-bar {
     background-color: rgba(255, 255, 255, 0.2);
@@ -2505,6 +2516,15 @@
 
   .News {
     display: none;
+    animation: popup2 1.5s;
+  }
+  @keyframes popup2 {
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
   .News hr {
     border: 0.1px dashed #262626;
@@ -2526,7 +2546,6 @@
     transition: all 0.3s;
     padding-left: 10px;
     margin-top: 25px;
-    margin-bottom: 30px;
   }
   .wrapper-2 .carousel-2 {
     font-size: 0px;
@@ -2611,7 +2630,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 25px;
   }
   .news-footer-font {
     display: flex;
