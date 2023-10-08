@@ -107,13 +107,13 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(changeText, 1500);
 });
 
-// closeBtnForLearnMoreAbout.addEventListener("click", function () {
-//   learnMore.style.display = "none";
-//   learnMoreTwo.style.display = "none";
-//   about.style.display = "flex";
-//   headerMain.style.display = "flex";
-//   closeBtnForLearnMoreAbout.style.display = "none";
-// });
+closeBtnForLearnMoreAbout.addEventListener("click", function () {
+  learnMore.style.display = "none";
+  learnMoreTwo.style.display = "none";
+  about.style.display = "flex";
+  headerMain.style.display = "flex";
+  closeBtnForLearnMoreAbout.style.display = "none";
+});
 // const newsSlideContentOneCloseIcon =
 //     document.querySelector("#close-container-1"),
 //   newsSlideContentTwoCloseIcon = document.querySelector("#close-container-2"),
