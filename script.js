@@ -300,7 +300,7 @@ const carousel2 = document.querySelector(".carousel-2"),
   arrowIcons2 = document.querySelectorAll(".arrows-2 img");
 arrowIcons2.forEach((icon) => {
   icon.addEventListener("click", () => {
-    let firstImgWidth2 = firstImg2.clientWidth + 30;
+    let firstImgWidth2 = firstImg2.clientWidth + 15;
     carousel2.scrollLeft +=
       icon.id == "left-2" ? -firstImgWidth2 : firstImgWidth2;
   });
