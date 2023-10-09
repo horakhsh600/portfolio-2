@@ -117,7 +117,11 @@ closeBtnForLearnMoreAbout.addEventListener("click", function () {
 const newsSlideContentOneCloseIcon =
     document.querySelector("#close-container-1"),
   newsSlideContentTwoCloseIcon = document.querySelector("#close-container-2"),
-  newsSlideContentThreeCloseIcon = document.querySelector("#close-container-3");
+  newsSlideContentThreeCloseIcon = document.querySelector("#close-container-3"),
+  newsSlideContentFourCloseIcon = document.querySelector("#close-container-4"),
+  newsSlideContentFiveCloseIcon = document.querySelector("#close-container-5"),
+  newsSlideContentSixCloseIcon = document.querySelector("#close-container-6");
+
 newsSlideContentOneCloseIcon.addEventListener("click", function () {
   newsSlidesContentOne.style.display = "none";
   newsMainContent.style.display = "grid";
@@ -140,6 +144,36 @@ newsSlideContentTwoCloseIcon.addEventListener("click", function () {
 });
 newsSlideContentThreeCloseIcon.addEventListener("click", function () {
   newsSlidesContentThree.style.display = "none";
+  newsMainContent.style.display = "grid";
+  about.style.display = "none";
+  home.style.display = "none";
+  portfolio.style.display = "none";
+  news.style.display = "block";
+  contact.style.display = "none";
+  headerMain.style.display = "flex";
+});
+newsSlideContentFourCloseIcon.addEventListener("click", function () {
+  newsSlidesContentFour.style.display = "none";
+  newsMainContent.style.display = "grid";
+  about.style.display = "none";
+  home.style.display = "none";
+  portfolio.style.display = "none";
+  news.style.display = "block";
+  contact.style.display = "none";
+  headerMain.style.display = "flex";
+});
+newsSlideContentFiveCloseIcon.addEventListener("click", function () {
+  newsSlidesContentFive.style.display = "none";
+  newsMainContent.style.display = "grid";
+  about.style.display = "none";
+  home.style.display = "none";
+  portfolio.style.display = "none";
+  news.style.display = "block";
+  contact.style.display = "none";
+  headerMain.style.display = "flex";
+});
+newsSlideContentSixCloseIcon.addEventListener("click", function () {
+  newsSlidesContentSix.style.display = "none";
   newsMainContent.style.display = "grid";
   about.style.display = "none";
   home.style.display = "none";
@@ -202,7 +236,10 @@ const newsSlidesContentTitleOne = document.querySelector("#news-slides-font-1"),
   newsSlidesContentTitleSix = document.querySelector("#news-slides-font-6"),
   newsSlidesContentOne = document.querySelector("#slide-1-container"),
   newsSlidesContentTwo = document.querySelector("#slide-2-container"),
-  newsSlidesContentThree = document.querySelector("#slide-3-container");
+  newsSlidesContentThree = document.querySelector("#slide-3-container"),
+  newsSlidesContentFour = document.querySelector("#slide-4-container"),
+  newsSlidesContentFive = document.querySelector("#slide-5-container"),
+  newsSlidesContentSix = document.querySelector("#slide-6-container");
 
 newsSlidesContentTitleOne.addEventListener("click", function () {
   newsSlidesContentOne.style.display = "block";
@@ -228,6 +265,39 @@ newsSlidesContentTitleTwo.addEventListener("click", function () {
 });
 newsSlidesContentTitleThree.addEventListener("click", function () {
   newsSlidesContentThree.style.display = "block";
+  newsMainContent.style.display = "none";
+  about.style.display = "none";
+  home.style.display = "none";
+  portfolio.style.display = "none";
+  news.style.display = "none";
+  contact.style.display = "none";
+  headerMain.style.display = "none";
+  closeBtnForLearnMoreAbout.style.display = "none";
+});
+newsSlidesContentTitleFour.addEventListener("click", function () {
+  newsSlidesContentFour.style.display = "block";
+  newsMainContent.style.display = "none";
+  about.style.display = "none";
+  home.style.display = "none";
+  portfolio.style.display = "none";
+  news.style.display = "none";
+  contact.style.display = "none";
+  headerMain.style.display = "none";
+  closeBtnForLearnMoreAbout.style.display = "none";
+});
+newsSlidesContentTitleFive.addEventListener("click", function () {
+  newsSlidesContentFive.style.display = "block";
+  newsMainContent.style.display = "none";
+  about.style.display = "none";
+  home.style.display = "none";
+  portfolio.style.display = "none";
+  news.style.display = "none";
+  contact.style.display = "none";
+  headerMain.style.display = "none";
+  closeBtnForLearnMoreAbout.style.display = "none";
+});
+newsSlidesContentTitleSix.addEventListener("click", function () {
+  newsSlidesContentSix.style.display = "block";
   newsMainContent.style.display = "none";
   about.style.display = "none";
   home.style.display = "none";
