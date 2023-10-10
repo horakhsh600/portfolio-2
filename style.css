@@ -2522,20 +2522,14 @@
     margin-top: 50px;
     overflow: hidden;
   }
-  .images {
-  }
   .part-7-main-learn-more-container {
+    margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-content: center;
-    justify-items: center;
-    padding: 0;
-    margin-top: 40px;
   }
   .part-7-main-learn-more-container div {
-    border: 2px solid #333;
-    padding: 30px 64px;
+    border: 1px solid #333;
+    padding: 23px 24.5px;
   }
   .part-7-main-learn-more-container img {
     width: 65px;
@@ -2545,7 +2539,27 @@
   .part-7-main-learn-more-container img:hover {
     filter: invert(0%);
   }
+  .part-8-container {
+    margin-top: 40px;
+  }
+  .part-8-main-font {
+    border: 2px solid #777;
+  }
+  .profile-font-8 p {
+    color: #777;
+  }
+  .part-8-main-font img:first-child {
+    width: 30px;
 
+    position: relative;
+    margin-top: -40px;
+    margin-left: 40px;
+  }
+  .part-8-profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+  }
   .News {
     display: none;
     animation: popup2 0.8s;
