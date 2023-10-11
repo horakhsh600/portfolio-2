@@ -357,24 +357,52 @@ contactOptionPhone.addEventListener("click", function () {
 
 const carousel = document.querySelector(".carousel"),
   firstImg = carousel.querySelectorAll("img")[0],
-  arrowIcons = document.querySelectorAll(".arrows img"),
-  picturePercentge = document.querySelector("#portfolio-footer-percentge");
+  myDiv = document.getElementById("portfolio-footer-percentge"),
+  arrowIcons = document.querySelectorAll(".arrows img");
+
 arrowIcons.forEach((icon) => {
   icon.addEventListener("click", () => {
     let firstImgWidth = firstImg.clientWidth + 27;
+    let newWidth = parseFloat(myDiv.style.width) || 16.6;
+
+    if (icon.id == "left") {
+      newWidth -= 16.6;
+    } else {
+      newWidth += 16.6;
+    }
+
+    myDiv.style.width = `${newWidth}%`;
     carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
   });
 });
+
 const carousel2 = document.querySelector(".carousel-2"),
   firstImg2 = carousel2.querySelectorAll("img")[0],
+  myDivTwo = document.getElementById("news-footer-percentge"),
   arrowIcons2 = document.querySelectorAll(".arrows-2 img");
-arrowIcons2.forEach((icon) => {
-  icon.addEventListener("click", () => {
-    let firstImgWidth2 = firstImg2.clientWidth + 15;
-    carousel2.scrollLeft +=
-      icon.id == "left-2" ? -firstImgWidth2 : firstImgWidth2;
+
+if (myDivTwo) {
+  arrowIcons2.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      let firstImgWidth2 = firstImg2.clientWidth + 20;
+      let newWidth = parseFloat(myDivTwo.style.width) || 16.6;
+
+      if (icon.id == "left-2") {
+        newWidth -= 16.6;
+      } else {
+        newWidth += 16.6;
+      }
+
+      myDivTwo.style.width = `${newWidth}%`;
+      carousel2.scrollLeft +=
+        icon.id == "left-2" ? -firstImgWidth2 : firstImgWidth2;
+    });
   });
-});
+} else {
+  console.error(
+    "Element with ID 'news-footer-percentge' not found in the HTML."
+  );
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   const textElementAbout = document.getElementById(

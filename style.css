@@ -121,6 +121,7 @@
   }
   .about {
     display: none;
+    margin-top: 50px;
   }
   .about > img {
     width: 320px;
@@ -213,13 +214,14 @@
   .close-container-learn-more-about {
     float: right;
     border: 2px solid white;
-    width: 31px;
+    width: 35px;
     height: 31px;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s;
     margin-left: 20px;
     display: none;
+    margin-top: 10px;
   }
   .close-container-learn-more-about:hover {
     border-radius: 100%;
@@ -246,6 +248,7 @@
     border-radius: 10px;
     margin-top: -23px;
     overflow: hidden;
+    margin-top: 10px;
   }
   .about-learn-more-aside {
     max-width: 270px;
@@ -433,7 +436,7 @@
     color: #fe0000;
   }
   .wrapper {
-    max-width: 1200px;
+    max-width: 1482px;
     padding: 0 10px;
     transition: all 0.3s;
     padding-left: 10px;
@@ -455,8 +458,10 @@
     height: 246.67px;
     object-fit: cover;
     user-select: none;
-    margin-left: 0px;
     width: calc(100% / 3);
+    width: 246.67px;
+    border-radius: 5px;
+    margin-left: 20px;
   }
   .about-learn-more-aside-bottom ul {
     padding-inline-start: 0;
@@ -663,6 +668,63 @@
     padding: 0;
     margin-top: 40px;
   }
+  .container-education-timeline {
+    display: flex;
+  }
+  .year-of-education-timeline {
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+  .year-of-education-timeline ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+  }
+  .year-of-education-timeline ul li span {
+    padding-bottom: 45px;
+  }
+  .year-of-education-timeline ul li span:first-child {
+    color: #a2a2a2;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 9px 25px;
+    border-radius: 50px;
+    font-family: "Mulish";
+    font-size: 14px;
+  }
+  .year-of-education-timeline ul li::before {
+    content: url(images/black-circle.png);
+    margin-left: -26px;
+    padding-right: 20px;
+  }
+  .year-of-education-timeline ul li {
+    border-left: 0.5px solid #333;
+  }
+  .year-of-education-timeline ul li span:last-child {
+    margin-left: 50px;
+  }
+  .year-of-education-timeline ul li span p:first-child {
+    font-family: "Poppins";
+    font-size: 15px;
+    font-weight: 600;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 2px;
+    margin-top: 50px;
+  }
+  .year-of-education-timeline ul li span p:last-child {
+    color: #a2a2a2;
+    font-family: "Mulish";
+    font-size: 14px;
+    font-weight: 400;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  .year-of-education-timeline ul li {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    height: 100px;
+  }
   .part-7-main-learn-more-container div {
     border: 2px solid #333;
     padding: 30px 64px;
@@ -702,10 +764,6 @@
   .fourth-img,
   .fifth-img,
   .sixth-img {
-    width: 246.67px;
-    height: 246.67px;
-    border-radius: 5px;
-    margin-right: 20px;
   }
 
   .avocado-title h3,
@@ -743,9 +801,9 @@
     align-items: center;
     margin: auto;
   }
-  .portfolio-footer-percentge {
+  #portfolio-footer-percentge {
     border: 1px solid #999999;
-    width: 20%;
+    width: 16.6px;
   }
   #portfolio-footer-first-font {
     margin-right: 15px;
@@ -785,7 +843,7 @@
     overflow: hidden;
     scroll-behavior: smooth;
     display: grid;
-    grid-template-columns: repeat(6, 260px);
+    grid-template-columns: repeat(6, 262px);
   }
   .carousel-2 div:first-child {
     margin-left: 0px;
@@ -804,9 +862,6 @@
     height: 150px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
-  }
-  .first-card {
-    flex-grow: 3;
   }
   .news-footer {
     display: flex;
@@ -830,7 +885,7 @@
     align-items: center;
     margin: auto;
   }
-  .news-footer-percentge {
+  #news-footer-percentge {
     border: 1px solid #999999;
     width: 20%;
   }
@@ -882,7 +937,10 @@
   }
   .slide-1-container,
   .slide-2-container,
-  .slide-3-container {
+  .slide-3-container,
+  .slide-4-container,
+  .slide-5-container,
+  .slide-6-container {
     display: none;
     height: 400px;
   }
@@ -911,7 +969,10 @@
   }
   .news-slide-main-content-1,
   .news-slide-main-content-2,
-  .news-slide-main-content-3 {
+  .news-slide-main-content-3,
+  .news-slide-main-content-4,
+  .news-slide-main-content-5,
+  .news-slide-main-content-6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -931,7 +992,10 @@
   }
   .news-slide-main-content-1-text p,
   .news-slide-main-content-2-text p,
-  .news-slide-main-content-3-text p {
+  .news-slide-main-content-3-text p,
+  .news-slide-main-content-4-text p,
+  .news-slide-main-content-5-text p,
+  .news-slide-main-content-6-text p {
     color: #a2a2a2;
     font-family: "Mulish";
     font-size: 16px;
@@ -942,7 +1006,10 @@
   }
   #slide-1-content-text,
   #slide-2-content-text,
-  #slide-3-content-text {
+  #slide-3-content-text,
+  #slide-4-content-text,
+  #slide-5-content-text,
+  #slide-6-content-text {
     font-size: 25px;
     font-weight: 600;
     line-height: 1.3;
@@ -952,7 +1019,10 @@
   }
   #slide-1-content--text,
   #slide-2-content--text,
-  #slide-3-content--text {
+  #slide-3-content--text,
+  #slide-4-content--text,
+  #slide-5-content--text,
+  #slide-6-content--text {
     color: #a2a2a2;
     line-height: 1.7;
     letter-spacing: 0.2px;
@@ -2541,6 +2611,8 @@
   }
   .part-8-container {
     margin-top: 40px;
+  }
+  .part-8-content img:first-child {
   }
   .part-8-main-font {
     border: 2px solid #777;
