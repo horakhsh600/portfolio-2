@@ -355,55 +355,6 @@ contactOptionPhone.addEventListener("click", function () {
   closeBtnForLearnMoreAbout.style.display = "none";
 });
 
-const carousel = document.querySelector(".carousel"),
-  firstImg = carousel.querySelectorAll("img")[0],
-  myDiv = document.getElementById("portfolio-footer-percentge"),
-  arrowIcons = document.querySelectorAll(".arrows img");
-
-arrowIcons.forEach((icon) => {
-  icon.addEventListener("click", () => {
-    let firstImgWidth = firstImg.clientWidth + 27;
-    let newWidth = parseFloat(myDiv.style.width) || 16.6;
-
-    if (icon.id == "left") {
-      newWidth -= 16.6;
-    } else {
-      newWidth += 16.6;
-    }
-
-    myDiv.style.width = `${newWidth}%`;
-    carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
-  });
-});
-
-const carousel2 = document.querySelector(".carousel-2"),
-  firstImg2 = carousel2.querySelectorAll("img")[0],
-  myDivTwo = document.getElementById("news-footer-percentge"),
-  arrowIcons2 = document.querySelectorAll(".arrows-2 img");
-
-if (myDivTwo) {
-  arrowIcons2.forEach((icon) => {
-    icon.addEventListener("click", () => {
-      let firstImgWidth2 = firstImg2.clientWidth + 18;
-      let newWidth = parseFloat(myDivTwo.style.width) || 16.6;
-
-      if (icon.id == "left-2") {
-        newWidth -= 16.6;
-      } else {
-        newWidth += 16.6;
-      }
-
-      myDivTwo.style.width = `${newWidth}%`;
-      carousel2.scrollLeft +=
-        icon.id == "left-2" ? -firstImgWidth2 : firstImgWidth2;
-    });
-  });
-} else {
-  console.error(
-    "Element with ID 'news-footer-percentge' not found in the HTML."
-  );
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   const textElementAbout = document.getElementById(
     "about-learn-more-font-content"
@@ -563,3 +514,85 @@ aboutLearnMoreTitleSecond6.addEventListener("click", function () {
   headerMain.style.display = "none";
   closeBtnForLearnMoreAbout.style.display = "none";
 });
+
+const newsFooterText = document.querySelector("#news-footer-second-font"),
+  PortfolioFooterText = document.querySelector("#portfolio-footer-second-font"),
+  carousel = document.querySelector(".carousel"),
+  firstImg = carousel.querySelectorAll("img")[0],
+  myDiv = document.getElementById("portfolio-footer-percentge"),
+  arrowIcons = document.querySelectorAll(".arrows img"),
+  carousel2 = document.querySelector(".carousel-2"),
+  firstImg2 = carousel2.querySelectorAll("img")[0],
+  myDivTwo = document.getElementById("news-footer-percentge"),
+  arrowIcons2 = document.querySelectorAll(".arrows-2 img");
+
+if (window.innerWidth > 1111) {
+  newsFooterText.textContent = "04";
+  PortfolioFooterText.textContent = "04";
+  arrowIcons2.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      let firstImgWidth2 = firstImg2.clientWidth + 18;
+      let newWidth = parseFloat(myDivTwo.style.width) || 25;
+
+      if (icon.id == "left-2") {
+        newWidth -= 25;
+      } else {
+        newWidth += 25;
+      }
+
+      myDivTwo.style.width = `${newWidth}%`;
+      carousel2.scrollLeft +=
+        icon.id == "left-2" ? -firstImgWidth2 : firstImgWidth2;
+    });
+  });
+
+  arrowIcons.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      let firstImgWidth = firstImg.clientWidth + 27;
+      let newWidth = parseFloat(myDiv.style.width) || 25;
+
+      if (icon.id == "left") {
+        newWidth -= 25;
+      } else {
+        newWidth += 25;
+      }
+
+      myDiv.style.width = `${newWidth}%`;
+      carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+    });
+  });
+} else {
+  newsFooterText.textContent = "06";
+  PortfolioFooterText.textContent = "06";
+  arrowIcons.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      let firstImgWidth = firstImg.clientWidth + 27;
+      let newWidth = parseFloat(myDiv.style.width) || 16.6;
+
+      if (icon.id == "left") {
+        newWidth -= 16.6;
+      } else {
+        newWidth += 16.6;
+      }
+
+      myDiv.style.width = `${newWidth}%`;
+      carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+    });
+  });
+  arrowIcons2.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      let firstImgWidth2 = firstImg2.clientWidth + 18;
+      let newWidth = parseFloat(myDivTwo.style.width) || 16.6;
+
+      if (icon.id == "left-2") {
+        newWidth -= 16.6;
+      } else {
+        newWidth += 16.6;
+      }
+
+      myDivTwo.style.width = `${newWidth}%`;
+      carousel2.scrollLeft +=
+        icon.id == "left-2" ? -firstImgWidth2 : firstImgWidth2;
+    });
+  });
+}
