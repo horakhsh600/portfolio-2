@@ -39,7 +39,7 @@ navLinks.forEach(function (link) {
 });
 homeOption.addEventListener("click", function () {
   about.style.display = "none";
-  home.style.display = "grid";
+  home.style.display = "flex";
   portfolio.style.display = "none";
   news.style.display = "none";
   contact.style.display = "none";
@@ -384,7 +384,7 @@ const carousel2 = document.querySelector(".carousel-2"),
 if (myDivTwo) {
   arrowIcons2.forEach((icon) => {
     icon.addEventListener("click", () => {
-      let firstImgWidth2 = firstImg2.clientWidth + 20;
+      let firstImgWidth2 = firstImg2.clientWidth + 18;
       let newWidth = parseFloat(myDivTwo.style.width) || 16.6;
 
       if (icon.id == "left-2") {
@@ -421,4 +421,145 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   setInterval(changeText, 1500);
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const textElementAbout = document.getElementById("about-main-font-content");
+  const messagesAbout = ["Developer", "Freelancer", "Designer"];
+  let currentIndexAbout = 0;
+
+  function changeText() {
+    textElementAbout.style.opacity = 0;
+    setTimeout(() => {
+      textElementAbout.textContent = messagesAbout[currentIndexAbout];
+      currentIndexAbout = (currentIndexAbout + 1) % messagesAbout.length;
+      textElementAbout.style.opacity = 1;
+    }, 500);
+  }
+
+  setInterval(changeText, 1500);
+});
+
+const learnMorePart8 = document.querySelector(".part-8-content");
+const secondImage = learnMorePart8.querySelector("li");
+let isDragStart = false,
+  isDragging = false,
+  prevPageX,
+  prevScrollLeft,
+  positionDiff;
+const applyDraggingClass = () => {
+  if (isDragStart) {
+    learnMorePart8.classList.add("dragging");
+  } else {
+    learnMorePart8.classList.remove("dragging");
+  }
+};
+
+const dragStart = (e) => {
+  isDragStart = true;
+  prevPageX = e.pageX || e.touches[0].pageX;
+  prevScrollLeft = learnMorePart8.scrollLeft;
+  applyDraggingClass();
+  learnMorePart8.style.transition = "none";
+};
+
+const dragging = (e) => {
+  if (!isDragStart) return;
+  e.preventDefault();
+  isDragging = true;
+  positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+  learnMorePart8.scrollLeft = prevScrollLeft - positionDiff;
+  showHideIcons();
+  applyDraggingClass();
+};
+
+const dragStop = () => {
+  isDragStart = false;
+  applyDraggingClass();
+  learnMorePart8.style.transition = "";
+  if (!isDragging) return;
+  isDragging = false;
+  autoSlide();
+};
+
+learnMorePart8.addEventListener("mousedown", dragStart);
+learnMorePart8.addEventListener("touchstart", dragStart);
+document.addEventListener("mousemove", dragging);
+learnMorePart8.addEventListener("touchmove", dragging);
+document.addEventListener("mouseup", dragStop);
+learnMorePart8.addEventListener("touchend", dragStop);
+
+const aboutLearnMoreTitleSecond1 = document.querySelector(
+    "#news-slides--font-1"
+  ),
+  aboutLearnMoreTitleSecond2 = document.querySelector("#news-slides--font-2"),
+  aboutLearnMoreTitleSecond3 = document.querySelector("#news-slides--font-3"),
+  aboutLearnMoreTitleSecond4 = document.querySelector("#news-slides--font-4"),
+  aboutLearnMoreTitleSecond5 = document.querySelector("#news-slides--font-5"),
+  aboutLearnMoreTitleSecond6 = document.querySelector("#news-slides--font-6");
+
+aboutLearnMoreTitleSecond1.addEventListener("click", function () {
+  newsSlidesContentOne.style.display = "block";
+  newsMainContent.style.display = "none";
+  about.style.display = "none";
+  home.style.display = "none";
+  portfolio.style.display = "none";
+  news.style.display = "none";
+  contact.style.display = "none";
+  headerMain.style.display = "none";
+  closeBtnForLearnMoreAbout.style.display = "none";
+});
+aboutLearnMoreTitleSecond2.addEventListener("click", function () {
+  newsSlidesContentTwo.style.display = "block";
+  newsMainContent.style.display = "none";
+  about.style.display = "none";
+  home.style.display = "none";
+  portfolio.style.display = "none";
+  news.style.display = "none";
+  contact.style.display = "none";
+  headerMain.style.display = "none";
+  closeBtnForLearnMoreAbout.style.display = "none";
+});
+aboutLearnMoreTitleSecond3.addEventListener("click", function () {
+  newsSlidesContentThree.style.display = "block";
+  newsMainContent.style.display = "none";
+  about.style.display = "none";
+  home.style.display = "none";
+  portfolio.style.display = "none";
+  news.style.display = "none";
+  contact.style.display = "none";
+  headerMain.style.display = "none";
+  closeBtnForLearnMoreAbout.style.display = "none";
+});
+aboutLearnMoreTitleSecond4.addEventListener("click", function () {
+  newsSlidesContentFour.style.display = "block";
+  newsMainContent.style.display = "none";
+  about.style.display = "none";
+  home.style.display = "none";
+  portfolio.style.display = "none";
+  news.style.display = "none";
+  contact.style.display = "none";
+  headerMain.style.display = "none";
+  closeBtnForLearnMoreAbout.style.display = "none";
+});
+aboutLearnMoreTitleSecond5.addEventListener("click", function () {
+  newsSlidesContentFive.style.display = "block";
+  newsMainContent.style.display = "none";
+  about.style.display = "none";
+  home.style.display = "none";
+  portfolio.style.display = "none";
+  news.style.display = "none";
+  contact.style.display = "none";
+  headerMain.style.display = "none";
+  closeBtnForLearnMoreAbout.style.display = "none";
+});
+aboutLearnMoreTitleSecond6.addEventListener("click", function () {
+  newsSlidesContentSix.style.display = "block";
+  newsMainContent.style.display = "none";
+  about.style.display = "none";
+  home.style.display = "none";
+  portfolio.style.display = "none";
+  news.style.display = "none";
+  contact.style.display = "none";
+  headerMain.style.display = "none";
+  closeBtnForLearnMoreAbout.style.display = "none";
 });
