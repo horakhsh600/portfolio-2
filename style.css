@@ -3009,11 +3009,11 @@
     padding: 50px 20px 20px 20px;
     right: 0;
     overflow: hidden;
-    animation: fadeInRight 0.5s;
     z-index: 1;
     overflow-y: hidden;
+    animation: fadeInRight 0.5s;
   }
-  .header-right-side-phone.closing {
+  .header-right-side-phone-closing {
     animation: fadeOutRight 0.5s;
   }
   @keyframes fadeInRight {
@@ -3024,6 +3024,16 @@
     100% {
       opacity: 1;
       transform: translateX(0);
+    }
+  }
+  @keyframes fadeOutRight {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(150px);
     }
   }
   .header-right-side-phone ul {
@@ -3480,53 +3490,7 @@
   .portfolio-header {
     border-bottom: 0.2px dashed #262626;
   }
-  /*
-  .first-img {
-    display: block;
-    max-width: 246.67px;
-    width: 100%;
-    max-height: 246.67px;
-    height: 100%;
-    border-radius: 5px;
-  }
-  .avocado-title {
-    position: absolute;
-    max-width: 110px;
-    width: 100%;
-    max-height: 57px;
-    height: 100%;
-    background-color: white;
-    border-radius: 5px;
-    transition: all 0.5s;
-    padding: 1px 20px 10px 20px;
-    line-height: 0.6;
-    display: none;
-  }
-  .first-img,
-  .second-img,
-  .third-img,
-  .fourth-img,
-  .fifth-img,
-  .sixth-img {
-    width: 246.67px;
-    height: 246.67px;
-    border-radius: 5px;
-    margin-right: 20px;
-  }
 
-  .avocado-title h3,
-  .avocado-title span {
-    color: black;
-  }
-  #avocado-title-first-p {
-    font-weight: 600;
-    font-size: 15px;
-  }
-  #avocado-title-second-p {
-    color: #777;
-    font-size: 14px;
-  }
-*/
   #portfolio-title {
     font-style: normal;
     color: #fe0000;
